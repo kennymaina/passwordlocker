@@ -1,7 +1,7 @@
-class Credential:
-    """
-    Class that generates new instances of Credential
-    """
+# class Credential:
+#     """
+#     Class that generates new instances of Credential
+#     """
     class Account:
         account_list = []
     def __init__(self,account_name,account_password):
