@@ -59,18 +59,18 @@ class TestUser(unittest.TestCase):
             self.assertEqual(len(User.user_name),2)
 
 
-    def test_user_exists(self):
-        '''
-        test to check if we can return a Boolean  if we cannot find the user.
-        '''
+    # def test_user_exists(self):
+    #     '''
+    #     test to check if we can return a Boolean  if we cannot find the user.
+    #     '''
 
-        self.new_user.save_user()
-        test_user = User("vickie","vickie","12345ke","vickie@moringaschool.com")
-        test_user.save_user()
+    #     self.new_user.save_user()
+    #     test_user = User("vickie","vickie","12345ke","vickie@moringaschool.com")
+    #     test_user.save_user()
 
-        user_exists = User.user_exist("12345ke")
+    #     user_exists = User.user_exist("12345ke")
 
-        self.assertTrue(user_exists)
+    #     self.assertTrue(user_exists)
 
 
     def test_display_all_users(self):
