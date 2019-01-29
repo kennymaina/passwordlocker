@@ -30,20 +30,20 @@ class User:
         User.user_name.append(self)
 
 
-    @classmethod
-    def user_exist(cls,password):
-        '''
-        Method that checks if a user exists from the user name.
-        Args:
-            password: password to search if it exists
-        Returns :
-            Boolean: True or false depending if the user exists
-        '''
-        for user in cls.user_name:
-            if user.password == password:
-                    return True
+    # @classmethod
+    # def user_exist(cls,password):
+    #     '''
+    #     Method that checks if a user exists from the user name.
+    #     Args:
+    #         password: password to search if it exists
+    #     Returns :
+    #         Boolean: True or false depending if the user exists
+    #     '''
+    #     for user in cls.user_name:
+    #         if user.password == password:
+    #                 return True
 
-        return False
+    #     return False
 
 
     @classmethod
