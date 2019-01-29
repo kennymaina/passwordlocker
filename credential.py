@@ -2,14 +2,14 @@ class Credential:
     """
     Class that generates new instances of Credential
     """
-    # class Account:
-    #     account_list = []
-    # def __init__(self,account_name,account_password):
+    class Account:
+        account_list = []
+    def __init__(self,account_name,account_password):
        
-    #     self.account_name = account_name
-    #     self.account_password = account_password
+        self.account_name = account_name
+        self.account_password = account_password
 
-    # credential_list = []
+    credential_list = []
 
 
 
