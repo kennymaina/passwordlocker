@@ -29,16 +29,16 @@ class Credential:
         
         Credential.credential_list.append(self)
 
-    # @classmethod
-    # def account_exists(cls,account):
-       
-    #     for account in cls.account_list:
-    #         if account == account:
-    #                 return True
-    #     return False
-
-
     @classmethod
-    def display_credential(cls):
+    def account_exists(cls,account):
+       
+        for account in cls.account_list:
+            if account == account:
+                    return True
+        return False
+
+
+    # @classmethod
+    # def display_credential(cls):
         
-        return cls.credential_list
+    #     return cls.credential_list
