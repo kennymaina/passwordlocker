@@ -1,27 +1,27 @@
 import pyperclip
 import random
 
-class User:
+# class User:
 
     
-    user_name = []
-    def save_user(self):
+#     user_name = []
+#     def save_user(self):
 
-        '''
-        save_user method saves user objects into user_name
-        '''
+#         '''
+#         save_user method saves user objects into user_name
+#         '''
 
-        User.user_name.append(self)
+#         User.user_name.append(self)
     
 
-    def __init__(self,first_name,user_name,password,email):
+#     def __init__(self,first_name,user_name,password,email):
 
     
 
-        self.first_name = first_name
-        self.user_name = user_name
-        self.password = password
-        self.email = email
+#         self.first_name = first_name
+#         self.user_name = user_name
+#         self.password = password
+#         self.email = email
 
     def save_user(self):
         """
