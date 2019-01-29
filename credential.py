@@ -25,17 +25,17 @@ class Credential:
         return auto_password
 
 
-    # def save_credential(self):
+    def save_credential(self):
         
-    #     Credential.credential_list.append(self)
+        Credential.credential_list.append(self)
 
-    @classmethod
-    def account_exists(cls,account):
+    # @classmethod
+    # def account_exists(cls,account):
        
-        for account in cls.account_list:
-            if account == account:
-                    return True
-        return False
+    #     for account in cls.account_list:
+    #         if account == account:
+    #                 return True
+    #     return False
 
 
     @classmethod
