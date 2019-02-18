@@ -1,54 +1,53 @@
-import pyperclip
-import random
-
 class User:
+    """
+    Class that generates new instances of contacts.
+    """
 
-    
-    user_name = []
-    def save_user(self):
+    user_list = [] # empty user list
 
-        '''
-        save_user method saves user objects into user_name
-        '''
-
-        User.user_name.append(self)
-    
-
-    def __init__(self,first_name,user_name,password,email):
-
-    
-
-        self.first_name = first_name
-        self.user_name = user_name
+    def __init__(self,name,username,password):
+        self.name = name
+        self.username = username
         self.password = password
-        self.email = email
 
+        """
+        __init__ method that helps us define properties for our objects.
+        """    
     def save_user(self):
-        """
-        save_user method saves user objects into the user_names
-        """
-        User.user_name.append(self)
-
-
+        '''
+        save_user method saves user objects into user_list
+        '''
+        User.user_list.append(self)
+    def delete_user(self):
+        '''
+        delete_user_method deletes a saved user from the user_list
+        '''
+        User.user_list.remove(self)
     @classmethod
-    def user_exist(cls,password):
+    def find_by_username(cls,username):
         '''
-        Method that checks if a user exists from the user name.
-        Args:
-            password: password to search if it exists
-        Returns :
-            Boolean: True or false depending if the user exists
+        method that takes in a username and returns a user that matches that username
         '''
-        for user in cls.user_name:
-            if user.password == password:
-                    return True
-
+        for user in cls.user_list:
+            if user.username == username:
+                return user
+    @classmethod
+    def user_exists(cls,username):
+        '''
+        method that checks if a user exists froom the user list
+        '''
+        for user in cls.user_list:
+            if user.username == username:
+                return True
         return False
-
-
     @classmethod
     def display_users(cls):
         '''
-        method that returns the user name
+        method that returns a list of all users saved
         '''
-        return cls.user_name
+        return cls.user_list
+
+
+
+if __name__ == '__main__':
+    unittest.main()
